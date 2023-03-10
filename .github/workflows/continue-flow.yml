@@ -28,7 +28,7 @@ jobs:
         # if: steps.cache.outputs.cache-hit != 'true'
         run: |
           npm ci
-          echo ${{steps.cache.outputs.cache-hit}}
+          echo 'cache-hit: ' ${{steps.cache.outputs.cache-hit}}
       - name: Lint code
         run: npm run lint
   test:
